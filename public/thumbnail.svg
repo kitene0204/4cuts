@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e112a"/>
+    </linearGradient>
+
+    <!-- Glowing Pink Accent -->
+    <linearGradient id="pink-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="50%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <!-- Film Frame Gradient -->
+    <linearGradient id="frame-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+
+    <!-- Photo Slots -->
+    <linearGradient id="photo1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="photo2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="photo3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e9d5ff"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="photo4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Square Container Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg-grad)"/>
+
+  <!-- Outer Ambient Glow Circle -->
+  <circle cx="256" cy="256" r="180" fill="#ec4899" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="360" cy="380" r="120" fill="#f59e0b" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Outer Decorative Ring -->
+  <rect x="24" y="24" width="464" height="464" rx="72" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="8 8"/>
+
+  <!-- Center Photobooth 4-Cut Strip -->
+  <g transform="translate(166, 44)">
+    <!-- Shadow -->
+    <rect x="8" y="12" width="180" height="424" rx="20" fill="#000000" opacity="0.4"/>
+    
+    <!-- White Strip Frame -->
+    <rect x="0" y="0" width="180" height="424" rx="20" fill="url(#frame-grad)"/>
+
+    <!-- 4 Photo Frames -->
+    <rect x="14" y="16" width="152" height="84" rx="10" fill="url(#photo1)"/>
+    <rect x="14" y="108" width="152" height="84" rx="10" fill="url(#photo2)"/>
+    <rect x="14" y="200" width="152" height="84" rx="10" fill="url(#photo3)"/>
+    <rect x="14" y="292" width="152" height="84" rx="10" fill="url(#photo4)"/>
+
+    <!-- Camera / Silhouette Icons in Photo Slots -->
+    <!-- Slot 1: Smile face -->
+    <circle cx="90" cy="50" r="14" fill="#ffffff" opacity="0.8"/>
+    <path d="M 82 58 Q 90 66 98 58" fill="none" stroke="#ec4899" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="84" cy="46" r="2.5" fill="#db2777"/>
+    <circle cx="96" cy="46" r="2.5" fill="#db2777"/>
+
+    <!-- Slot 2: Heart -->
+    <path d="M 90 156 C 90 156 72 142 72 130 C 72 122 78 116 86 116 C 90 116 90 120 90 120 C 90 120 90 116 94 116 C 102 116 108 122 108 130 C 108 142 90 156 90 156 Z" fill="#ffffff" opacity="0.9"/>
+
+    <!-- Slot 3: Sparkles -->
+    <path d="M 90 228 L 93 239 L 104 242 L 93 245 L 90 256 L 87 245 L 76 242 L 87 239 Z" fill="#ffffff"/>
+
+    <!-- Slot 4: Camera -->
+    <rect x="74" y="328" width="32" height="22" rx="4" fill="#ffffff" opacity="0.9"/>
+    <circle cx="90" cy="339" r="6" fill="#0284c7"/>
+
+    <!-- Bottom Strip Branding -->
+    <text x="90" y="398" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="900" font-size="14" fill="#1e293b" letter-spacing="2">LIFE 4 CUTS</text>
+    <text x="90" y="412" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="700" font-size="9" fill="#94a3b8">인생네컷 ★ PHOTOBOOTH</text>
+  </g>
+
+  <!-- Left Side Floating Camera Badge -->
+  <g transform="translate(48, 180)">
+    <rect x="0" y="0" width="96" height="96" rx="28" fill="#1e293b" stroke="#ec4899" stroke-width="3" filter="url(#glow)"/>
+    <circle cx="48" cy="48" r="28" fill="url(#pink-grad)"/>
+    <circle cx="48" cy="48" r="16" fill="#0f172a"/>
+    <circle cx="48" cy="48" r="10" fill="#38bdf8"/>
+    <circle cx="52" cy="44" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- Right Side Floating Video Badge (1x / 2x / 4x) -->
+  <g transform="translate(368, 260)">
+    <rect x="0" y="0" width="96" height="80" rx="24" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+    <text x="48" y="38" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="18" fill="#fbbf24">TIMELAPSE</text>
+    <text x="48" y="58" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="14" fill="#ffffff">1X ~ 4X</text>
+  </g>
+
+  <!-- Top Title Overlay -->
+  <text x="256" y="492" text-anchor="middle" font-family="'Pretendard', sans-serif" font-weight="900" font-size="16" fill="#f8fafc" letter-spacing="4">인 생 네 컷  포 토 부 스</text>
+</svg>

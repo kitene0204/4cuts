@@ -1,5 +1,5 @@
 import React from 'react';
-import { Camera, Sparkles, RefreshCw, Layers } from 'lucide-react';
+import { Camera, RefreshCw } from 'lucide-react';
 import { Step } from '../types';
 
 interface HeaderProps {
