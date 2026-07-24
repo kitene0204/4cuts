@@ -1,0 +1,6 @@
+{
+  "name": "인생네컷 포토부스",
+  "description": "카메라 촬영, 카운트다운 소리, 스티커 및 직접 그리기, 프레임 선택 및 이미지/동영상(1x/1.5x/2x) 다운로드가 가능한 인생네컷 웹앱",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
